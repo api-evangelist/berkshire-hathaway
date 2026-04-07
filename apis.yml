@@ -1,7 +1,12 @@
 aid: berkshire-hathaway
-url: https://raw.githubusercontent.com/api-evangelist/berkshire-hathaway/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/berkshire-hathaway/refs/heads/main/apis.yml
 modified: '2026-03-21'
 apis: []
 common:
   - type: Website
     url: https://www.berkshire-hathaway.com
+description: >-
+  Berkshire Hathaway is a multinational conglomerate holding company with diversified
+  subsidiaries across insurance, freight rail transportation, energy, manufacturing,
+  retailing, and services.
