@@ -57,6 +57,8 @@ apis:
       - type: Support
         url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/support/
 common:
+  - type: DomainSecurity
+    url: security/berkshire-hathaway-domain-security.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/berkshire-hathaway
   - type: Website
