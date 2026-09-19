@@ -1,7 +1,9 @@
 ---
 title: Why Buffett's Alphabet Bet Raises AI Cycle Questions
 url: https://www.vantagemarkets.com/en/academy/buffett-alphabet-ai-cycle-analysis/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Berkshire Hathaway" press release artificial intelligence'
 position: 5
 source: serpapi-google

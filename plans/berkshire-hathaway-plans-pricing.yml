@@ -4,145 +4,31 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Berkshire Hathaway
 providerId: berkshire-hathaway
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
+modified: '2026-09-19'
+generated: '2026-09-19'
+method: searched
+source: >-
+  https://www.berkshirehathaway.com/ (full link inventory, 2026-09-19),
+  https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/getting-started/,
+  https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/support/ and
+  https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/registration/ (all 200, 2026-09-19).
+plan_count: 0
+note: >-
+  No API plans or pricing are published anywhere in the group. Berkshire Hathaway itself sells no
+  API. The BNSF Customer API (profiled in full under the bnsf record) is offered to existing BNSF
+  shipping customers at no stated price: onboarding is a registration via the customer portal's
+  Message Us box with a bnsf.com User ID and a CA-issued client certificate, and Restricted
+  Services are granted by request. There is no self-serve sign-up, no metered tier and no price
+  list. This REPLACES the 2026-05-04 scaffold, whose Free/Professional/Enterprise tiers were bulk-sweep
+  defaults the provider never published.
 tags:
   - Conglomerate
-  - Energy
-  - Finance
   - Freight Rail
-  - Insurance
-  - Investment
-  - Manufacturing
-  - Retail
-  - Utilities
-description: Machine-readable plans and pricing scaffold for this API provider. Conforms to the API Commons
-  Plans schema. Tier limits and prices are scaffold defaults; replace with provider-published values.
-plans:
-  - id: berkshire-hathaway-free
-    name: Free
-    type: freemium
-    description: Free entry tier for the Berkshire Hathaway API surface. Intended for evaluation, prototyping,
-      and low-volume integrations. Real limits and pricing must be reconciled with the provider's published
-      plan documentation.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota across all included endpoints
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 1000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the free tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 10
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-    elements:
-      - name: Public Documentation
-      - name: Community Support
-      - name: Sandbox Access
-      - name: BNSF Railway API
-  - id: berkshire-hathaway-pro
-    name: Professional
-    type: paid
-    description: Production tier for Berkshire Hathaway. Provides higher quotas, priority support, and
-      access to the broader API portfolio. Pricing placeholder; align with the provider's pricing page.
-    entries:
-      - label: API Requests
-        description: Monthly API request quota
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: 100000
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1
-        price: TBD
-        userMultiplied: false
-      - label: Rate Limit
-        description: Maximum requests per minute on the professional tier
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 100
-        timeFrame: minute
-        geo: global
-        domains: []
-        unit: 1
-        price: '0.00'
-        userMultiplied: false
-      - label: Overage
-        description: Per-request price after monthly quota is exceeded
-        name: overage
-        type: metered
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: global
-        domains: []
-        unit: 1000
-        price: TBD
-        userMultiplied: false
-    elements:
-      - name: All Production Endpoints
-      - name: Email Support
-      - name: SLA Targets
-      - name: Webhook Subscriptions
-      - name: BNSF Railway API
-  - id: berkshire-hathaway-enterprise
-    name: Enterprise
-    type: enterprise
-    description: Custom-negotiated tier for Berkshire Hathaway. Includes dedicated capacity, contractual
-      SLAs, security review, data residency options, and named technical account management.
-    entries:
-      - label: API Requests
-        description: Negotiated request volume; -1 indicates uncapped subject to fair use
-        name: api_requests
-        type: quota
-        metric: requests
-        limit: -1
-        timeFrame: month
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-      - label: Rate Limit
-        description: Negotiated burst and steady-state rate
-        name: rate_limit
-        type: rate
-        metric: requests_per_minute
-        limit: 1000
-        timeFrame: minute
-        geo: configurable
-        domains: []
-        unit: 1
-        price: custom
-        userMultiplied: false
-    elements:
-      - name: Unlimited / Negotiated Volume
-      - name: 24/7 Dedicated Support
-      - name: Contractual SLA
-      - name: Security & Compliance Review
-      - name: Dedicated Account Manager
-      - name: Custom Data Residency
-      - name: BNSF Railway API
+description: >-
+  Plans and pricing record for Berkshire Hathaway. plan_count is 0 because no tier, quota or
+  price is published; the only API in the group is included in a BNSF freight customer
+  relationship and gated by registration rather than sold.
+plans: []
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

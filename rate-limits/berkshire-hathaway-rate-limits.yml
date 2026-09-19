@@ -4,93 +4,79 @@ schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main
 provider: Berkshire Hathaway
 providerId: berkshire-hathaway
 created: '2026-05-04'
-# Provenance stamped 2026-08-11: this artifact was written by the API Evangelist
-# bulk sweep dated 2026-05-04, not harvested from the provider. See roadmap#35.
-method: generated
-modified: '2026-05-04'
+modified: '2026-09-19'
+generated: '2026-09-19'
+method: searched
+source: >-
+  The 429 response object shared by all eight BNSF Customer API OpenAPI 3.0.0 documents the
+  Developer's Console loads (e.g. https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/trace.json,
+  components.responses.429), fetched 2026-09-19. The limits below are the provider's own words.
+  This REPLACES the 2026-05-04 scaffold, whose free/professional/enterprise tiers were bulk-sweep
+  defaults and never published by the provider.
+note: >-
+  Berkshire Hathaway itself publishes no API. The only API in the group is the BNSF Customer API,
+  which is profiled in full under the bnsf record (x-parent: berkshire-hathaway); these are the
+  BNSF API Gateway limits, recorded here because the BNSF Railway API entry sits in this record.
+  The gateway publishes no rate-limit response headers — the only runtime signal an integrator
+  gets is the 429 status itself, and the published guidance is to resubmit failed requests in a
+  rate-limited manner.
 tags:
   - Conglomerate
-  - Energy
-  - Finance
   - Freight Rail
-  - Insurance
-  - Investment
-  - Manufacturing
-  - Retail
-  - Utilities
   - Rate Limiting
   - Quotas
   - Throttling
-description: Machine-readable rate limit definitions for the Berkshire Hathaway API surface. Captures
-  per-tier quotas, burst behavior, response signaling, and recovery semantics. Defaults are scaffold values
-  to be replaced with published provider limits.
+description: >-
+  Published rate limits of the BNSF Customer API Gateway, as stated in the 429 Too Many Requests
+  response of every operation in the eight published OpenAPI documents. Limits are enforced per
+  partner (the mTLS certificate holder) per service, and per service across all partners.
 headers:
-  limit: X-RateLimit-Limit
-  remaining: X-RateLimit-Remaining
-  reset: X-RateLimit-Reset
-  retryAfter: Retry-After
-  policy: RateLimit-Policy
+  limit: null
+  remaining: null
+  reset: null
+  retryAfter: null
+  policy: null
+  note: No X-RateLimit-*, RateLimit-* or Retry-After header is documented; the spec names only the 429 status.
 responseCodes:
   throttled: 429
   quotaExceeded: 429
-  serviceUnavailable: 503
+  gatewayTimeout: 504
+limit_count: 3
 limits:
-  - tier: free
-    name: Free Tier Default
-    scope: api-key
+  - name: Per-partner per-service, per second
+    scope: partner-per-service
+    metric: requests_per_second
+    limit: 1
+    timeFrame: second
+    verbatim: 1 API Request Per Second, Per Partner, Per Service
+    applies:
+      - BNSF Railway API
+  - name: Per-partner per-service, per minute
+    scope: partner-per-service
     metric: requests_per_minute
-    limit: 10
-    burst: 20
+    limit: 15
     timeFrame: minute
+    verbatim: 15 API Requests Per Minute, Per Partner, Per Service
     applies:
       - BNSF Railway API
-  - tier: free
-    name: Free Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 1000
-    timeFrame: month
-    applies:
-      - BNSF Railway API
-  - tier: professional
-    name: Professional Tier Default
-    scope: api-key
+  - name: Per-service across all partners, per minute
+    scope: service
     metric: requests_per_minute
     limit: 100
-    burst: 200
     timeFrame: minute
-    applies:
-      - BNSF Railway API
-  - tier: professional
-    name: Professional Tier Monthly Quota
-    scope: api-key
-    metric: requests_per_month
-    limit: 100000
-    timeFrame: month
-    applies:
-      - BNSF Railway API
-  - tier: enterprise
-    name: Enterprise Negotiated Limit
-    scope: contract
-    metric: requests_per_minute
-    limit: 1000
-    burst: 5000
-    timeFrame: minute
+    verbatim: 100 API Request Per Minute, Per Service
     applies:
       - BNSF Railway API
 policies:
-  - name: Backoff Strategy
-    description: Clients should implement exponential backoff with jitter, honoring the Retry-After header
-      when present.
-  - name: Burst Handling
-    description: Short bursts above the steady-state limit are tolerated up to the documented burst ceiling
-      before throttling engages.
-  - name: Quota Reset
-    description: Monthly quotas reset at the start of each calendar month in UTC. Per-minute and per-second
-      windows reset on a sliding-window basis.
-  - name: Fair Use
-    description: Even on uncapped enterprise tiers, sustained usage that materially impacts shared infrastructure
-      may be subject to fair-use throttling.
+  - name: Throttle Response
+    description: >-
+      When requests exceed these limits the API Gateway returns a 429 Too Many Requests error
+      response. Upon receiving such exceptions, you can resubmit failed requests in a rate-limited
+      manner, complying with the API Gateway throttle limits. (verbatim from the 429 response)
+  - name: Gateway Timeout
+    description: >-
+      504 Gateway Timeout — the server is acting as a gateway and cannot get a response in time
+      for a request. Wait about one minute then try again. (verbatim from the 504 response)
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

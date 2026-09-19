@@ -1,0 +1,369 @@
+generated: '2026-09-19'
+method: probed
+source: 'live GET of the closed /.well-known/ path list (plus /apis.json, /apis.yml, /llms.txt and the A2A agent-card
+  paths) on every host the record knows: the registrable domain and www, the BNSF docs host, the two BNSF API gateway
+  hosts named by the Developer''s Console, and the BNSF customer portal.'
+description: 'No host serves a single /.well-known/ document. berkshirehathaway.com and www.berkshirehathaway.com
+  404 every path (Apache default 404 page); bnsf.com and www.bnsf.com 404 every path; api.bnsf.com:6443 and api-trial.bnsf.com:6443
+  answer 403 "Access Denied" to every anonymous request because the gateway is mTLS-only; customer.bnsf.com answers
+  200 with the same 2.2 KB "BNSF Login Required" HTML shell for every path, which is a catch-all router and not
+  a document. No WellKnown, SecurityTxt or AgentCard pointer is wired into apis.yml: the pointer would assert the
+  provider serves a surface it does not. A recorded absence is the measurement.'
+result:
+  documents_found: 0
+  hosts_probed: 7
+  paths_per_host: 16
+  agent_card: absent on every host (both /.well-known/agent-card.json and the legacy /.well-known/agent.json)
+  llms_txt: absent on every host
+  apis_json: absent on every host
+hosts:
+- host: https://berkshirehathaway.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/api-catalog.json
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://www.berkshirehathaway.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/api-catalog.json
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://bnsf.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/api-catalog.json
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://www.bnsf.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/api-catalog.json
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/ucp.json
+    status: 404
+  - path: /.well-known/acp.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /llms.txt
+    status: 404
+- host: https://api.bnsf.com:6443
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/openid-configuration
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/api-catalog
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/api-catalog.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/ucp.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/acp.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/aauth-resource.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/apis.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /apis.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /apis.yml
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/agent-card.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/agent.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /llms.txt
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+- host: https://api-trial.bnsf.com:6443
+  documents:
+  - path: /.well-known/security.txt
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/openid-configuration
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/oauth-authorization-server
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/oauth-protected-resource
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/api-catalog
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/api-catalog.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/ai-plugin.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/ucp.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/acp.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/aauth-resource.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/apis.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /apis.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /apis.yml
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/agent-card.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /.well-known/agent.json
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+  - path: /llms.txt
+    status: 403
+    note: '"Access Denied" (13-byte HTML) from the BNSF API gateway — the host requires certificate-based mutual
+      TLS; no discovery document is served anonymously.'
+- host: https://customer.bnsf.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/openid-configuration
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/api-catalog
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/api-catalog.json
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/ai-plugin.json
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/ucp.json
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/acp.json
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/aauth-resource.json
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/apis.json
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /apis.json
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /apis.yml
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/agent-card.json
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /.well-known/agent.json
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.
+  - path: /llms.txt
+    status: 200
+    type: text/html
+    note: HTML "BNSF Login Required" shell that JS-redirects to idp.bnsf.com/bnsfauth — a catch-all, not a document;
+      not saved.

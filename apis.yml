@@ -25,10 +25,11 @@ accessModel:
   generated: '2026-07-22'
   method: derived
 created: '2026-03-21'
-modified: '2026-04-19'
+modified: '2026-09-19'
 type: Index
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/berkshire-hathaway.png
 specificationVersion: '0.23'
+position: Producing
 description: >-
   Berkshire Hathaway is a multinational conglomerate holding company
   headquartered in Omaha, Nebraska. The company's diversified subsidiaries span
@@ -61,6 +62,8 @@ apis:
       - Supply Chain
       - Transportation
     humanURL: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/
+    baseURL: https://api.bnsf.com:6443
+    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/berkshire-hathaway.png
     description: >-
       The BNSF API Center provides customer APIs for programmatic integration
       with BNSF Railway freight shipping operations. APIs enable real-time
@@ -79,6 +82,41 @@ apis:
         url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/catalog/
       - type: Support
         url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/support/
+      - type: SignUp
+        url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/registration/
+      - type: Webhooks
+        url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/push-notifications/
+        name: BNSF Push Notifications (Webhooks)
+        description: >-
+          Six provider-documented webhook events with published JSON payloads — Bad Order, Drayage
+          Booking, Geofence, Overload, Local Service Notification and Price Update — delivered by
+          HTTPS POST from api.bnsf.com to a customer-supplied endpoint, registered on this page.
+      - type: RateLimits
+        url: rate-limits/berkshire-hathaway-rate-limits.yml
+      - type: Specification
+        url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/trace.json
+        name: BNSF Tracing API (OpenAPI 3.0.0)
+      - type: Specification
+        url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/intermodal-hub-operations.json
+        name: BNSF Intermodal Hub Operations API (OpenAPI 3.0.0)
+      - type: Specification
+        url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/automotive-hub-operations.json
+        name: BNSF Automotive Hub Operations API (OpenAPI 3.0.0)
+      - type: Specification
+        url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/prices.json
+        name: BNSF Prices and Rates API (OpenAPI 3.0.0)
+      - type: Specification
+        url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/schedules.json
+        name: BNSF Intermodal Schedules API (OpenAPI 3.0.0)
+      - type: Specification
+        url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/waybill.json
+        name: BNSF Waybill Management API (OpenAPI 3.0.0)
+      - type: Specification
+        url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/reference-files.json
+        name: BNSF Reference Files API (OpenAPI 3.0.0)
+      - type: Specification
+        url: https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/diagnostics.json
+        name: BNSF Diagnostics API (OpenAPI 3.0.0)
 common:
   - type: DomainSecurity
     url: security/berkshire-hathaway-domain-security.yml
@@ -86,6 +124,73 @@ common:
     url: https://www.linkedin.com/company/berkshire-hathaway
   - type: Website
     url: https://www.berkshirehathaway.com
+  - type: Newsroom
+    url: https://www.berkshirehathaway.com/news/2026news.html
+  - type: InvestorRelations
+    url: https://www.berkshirehathaway.com/reports.html
+    name: Annual & Interim Reports
+  - type: Governance
+    url: https://www.berkshirehathaway.com/govern/govern.html
+    name: Corporate Governance
+  - type: CodeOfConduct
+    url: https://www.berkshirehathaway.com/govern/code.html
+  - type: Sustainability
+    url: https://www.berkshirehathaway.com/sustainability/sustainabilityintro.html
+  - type: TermsOfService
+    url: https://www.berkshirehathaway.com/disclaimer.html
+    name: Legal Disclaimer
+    description: >-
+      The only site-terms document Berkshire Hathaway publishes; it governs accuracy of the
+      material and prohibits reproduction or distribution without written permission. The site
+      publishes no privacy policy — /privacy, /privacy.html and /.well-known/security.txt all 404.
+  - type: WellKnownProbe
+    url: well-known/berkshire-hathaway-well-known.yml
+    description: >-
+      Probe record, not a claim of service: 16 discovery paths on 7 hosts, 0 documents found.
+      No WellKnown, SecurityTxt or AgentCard pointer is emitted because none of them is served.
+  - type: RegulatoryPosture
+    url: regulatory/berkshire-hathaway-regulatory-posture.yml
+  - type: LLMsTxt
+    url: llms/berkshire-hathaway-llms.txt
+  - type: Plans
+    url: plans/berkshire-hathaway-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/berkshire-hathaway-rate-limits.yml
+  - type: FinOps
+    url: finops/berkshire-hathaway-finops.yml
+  - type: Subsidiary
+    url: https://apis.io/providers/bnsf/
+    name: BNSF Railway
+    x-relationship: subsidiary
+    description: >-
+      Holder of the group's only public API programme. The eight OpenAPI 3.0.0 documents linked
+      from this record's BNSF Railway API entry (59 operations) are harvested, refined and scored
+      in the BNSF record, which carries the full artifact set. They are referenced here rather than
+      duplicated: the contract declares itself BNSF's — info.contact CustomerAPI@bnsf.com,
+      termsOfService bnsf.com, servers https://api.bnsf.com:6443 — and a second scored copy would
+      double-count 59 operations in the catalog.
+  - type: Subsidiary
+    url: https://apis.io/providers/geico/
+    name: GEICO
+    x-relationship: subsidiary
+  - type: Subsidiary
+    url: https://apis.io/providers/precision-castparts/
+    name: Precision Castparts Corp.
+    x-relationship: subsidiary
+  - type: Subsidiary
+    url: https://apis.io/providers/dairyqueen/
+    name: International Dairy Queen
+    x-relationship: subsidiary
+  - type: Subsidiary
+    url: https://apis.io/providers/alleghany/
+    name: Alleghany Corporation
+    x-relationship: subsidiary
+  - type: About
+    url: https://www.berkshirehathaway.com/subs/sublinks.html
+    name: Links to Berkshire Operating Companies
+    description: >-
+      The provider's own list of ~70 operating companies. Five are profiled in the catalog today
+      (BNSF, GEICO, Precision Castparts, Dairy Queen, Alleghany); the rest are harvest candidates.
   - type: Features
     data:
       - name: BNSF Freight Rail Network
@@ -151,3 +256,17 @@ common:
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-19'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v3
+  note: >-
+    Berkshire Hathaway is a holding company and publishes no API of its own: 16 discovery paths were
+    probed on 7 hosts with 0 documents found, and berkshirehathaway.com serves only shareholder,
+    governance, news and sustainability pages. The group's one public API programme is the BNSF Customer
+    API - eight OpenAPI 3.0.0 documents, 59 operations, base https://api.bnsf.com:6443,
+    certificate-based mutual TLS - which is harvested, refined and scored in the bnsf record (x-parent:
+    berkshire-hathaway). Those specs are REFERENCED here, not duplicated: the contract declares itself
+    BNSF's (info.contact CustomerAPI@bnsf.com, termsOfService bnsf.com, servers api.bnsf.com), and a
+    second scored copy would double-count 59 operations in the catalog.

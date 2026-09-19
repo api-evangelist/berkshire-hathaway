@@ -1,7 +1,9 @@
 ---
 title: Berkshire Hathaway Takes Reserved Stance on Artificial ...
 url: https://www.linkedin.com/posts/cnbc_berkshire-annual-meeting-live-warren-buffetts-activity-7456363880903176192-fOVM
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Berkshire Hathaway" press release artificial intelligence'
 position: 4
 source: serpapi-google

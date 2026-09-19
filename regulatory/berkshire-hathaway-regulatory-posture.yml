@@ -1,0 +1,22 @@
+generated: '2026-09-19'
+method: searched
+probe: true
+source: >-
+  (a) artifacts harvested this run — well-known/ (0 documents on 7 hosts), security/ (probe-security-programs.py:
+  vdp=none trust=none), no lifecycle/ or conformance/ artifact exists for the parent; (b) conventional paths probed
+  live on https://www.berkshirehathaway.com — /accessibility 404, /accessibility/vpat 404, /legal/subprocessors 404,
+  /legal/dpa 404, /privacy/requests 404, /transparency 404, /security/sbom 404, /docs/data-residency 404,
+  /ai/transparency 404, /legal/report-content 404, /privacy 404, /security 404; (c) the site's complete link
+  inventory (home, govern/, sustainability/, disclaimer.html) read 2026-09-19.
+signals: {}
+note: >-
+  Berkshire Hathaway's corporate site is a static holding-company page set — shareholder letters, annual
+  and interim reports, news releases, an SEC EDGAR link, corporate-governance documents (governance
+  guidelines, code of business conduct and ethics, insider-trading and prohibited-business-practices
+  policies, committee charters, a conflict-minerals statement) and a sustainability page. None of the
+  fourteen observable signals is published: there is no accessibility conformance report, no subprocessor
+  list, no DPA, no data-subject-request page, no transparency report, no SBOM, no AI disclosure, no
+  data-residency or support-lifetime statement, and the site publishes no privacy policy at all (the
+  Legal Disclaimer at /disclaimer.html covers accuracy and reproduction only). Regulatory evidence for the
+  operating companies lives in their own records (bnsf, geico, precision-castparts, dairyqueen, alleghany),
+  not here. An empty signals block is the finding.
