@@ -2,21 +2,19 @@
 kin_checks:
   slug: berkshire-hathaway
   schema_version: 0.22.0
-  scored_at: '2026-09-18'
-  run_ts: 2026-09-18T231945
+  scored_at: '2026-09-19'
+  run_ts: 2026-09-19T193153
   note: Actionable checks (missed + partial) in `checks`, plus the ids that did not
     apply in `na`. Everything else in rubric/scoring-0.22.0.yml was earned; counts
     below let you verify that.
   counts:
     total: 136
-    earned: 14
-    partial: 5
-    missed: 77
-    na: 40
+    earned: 22
+    partial: 1
+    missed: 74
+    na: 39
   checks:
   - id: multiple_apis
-    status: missed
-  - id: base_url_per_api
     status: missed
   - id: well_known_published
     status: missed
@@ -29,6 +27,8 @@ kin_checks:
   - id: servers_resolvable
     status: missed
   - id: examples_present
+    status: missed
+  - id: inbound_contract_published
     status: missed
   - id: asyncapi_present
     status: missed
@@ -66,8 +66,6 @@ kin_checks:
     status: missed
   - id: security_disclosure
     status: missed
-  - id: webhooks_advertised
-    status: missed
   - id: github_org_present
     status: missed
   - id: roadmap_present
@@ -90,11 +88,11 @@ kin_checks:
     status: missed
   - id: blog_present
     status: missed
+  - id: plans_present
+    status: missed
+  - id: plans_multiple
+    status: missed
   - id: pricing_link
-    status: missed
-  - id: sign_up_present
-    status: missed
-  - id: terms_of_service
     status: missed
   - id: privacy_policy
     status: missed
@@ -107,8 +105,6 @@ kin_checks:
   - id: reg_authentication_documented
     status: missed
   - id: reg_vulnerability_disclosure
-    status: missed
-  - id: reg_terms_of_service
     status: missed
   - id: reg_privacy_policy
     status: missed
@@ -148,8 +144,6 @@ kin_checks:
     status: missed
   - id: openapi_examples
     status: missed
-  - id: event_surface_described
-    status: missed
   - id: agent_skills
     status: missed
   - id: well_known_catalog
@@ -168,18 +162,6 @@ kin_checks:
     status: missed
   - id: agentic_commerce
     status: missed
-  - id: rate_limits_documented
-    status: partial
-    earned: 2.0
-  - id: rate_limits_rich
-    status: partial
-    earned: 1.0
-  - id: plans_present
-    status: partial
-    earned: 2.0
-  - id: plans_multiple
-    status: partial
-    earned: 1.0
   - id: rate_limit_signal
     status: partial
     earned: 3.5
@@ -196,7 +178,6 @@ kin_checks:
   - graphql_descriptions
   - graphql_sdl_present
   - graphql_type_depth
-  - inbound_contract_published
   - info_complete
   - messages_with_schema
   - oauth_flows_current
