@@ -1,4 +1,4 @@
-# Berkshire Hathaway (berkshire-hathaway)
+# Berkshire Hathaway
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,85 +64,102 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Berkshire Hathaway is a multinational conglomerate holding company
-headquartered in Omaha, Nebraska. The company's diversified subsidiaries span
-insurance (GEICO, Berkshire Hathaway Specialty Insurance, National Indemnity),
-freight rail transportation (BNSF Railway), utilities and energy (Berkshire
-Hathaway Energy), manufacturing (Precision Castparts, Iscar), wholesale
-distribution (McLane Company), and services and retailing. BNSF Railway, one
-of North America's largest freight rail networks, operates a public API Center
-providing customer APIs for shipment tracking, pricing, scheduling, and waybill
-management.
+Berkshire Hathaway is a multinational conglomerate holding company headquartered in Omaha, Nebraska. The company's diversified subsidiaries span insurance (GEICO, Berkshire Hathaway Specialty Insurance, National Indemnity), freight rail transportation (BNSF Railway), utilities and energy (Berkshire Hathaway Energy), manufacturing (Precision Castparts, Iscar), wholesale distribution (McLane Company), and services and retailing. BNSF Railway, one of North America's largest freight rail networks, operates a public API Center providing customer APIs for shipment tracking, pricing, scheduling, and waybill management.
 
-**URL:** [https://www.berkshirehathaway.com](https://www.berkshirehathaway.com)
+**Areas:** Conglomerate · Energy · Finance · Freight Rail · Insurance · Investment · Manufacturing · Retail · Utilities · Fortune 100
 
-**Run:** [Capabilities Using Naftiko](https://github.com/naftiko/fleet?utm_source=api-evangelist&utm_medium=readme&utm_campaign=company-api-evangelist&utm_content=repo)
+## Berkshire Hathaway on APIs.io
 
-## Tags:
+Everything profiled for Berkshire Hathaway is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/berkshire-hathaway/](https://apis.io/providers/berkshire-hathaway/)** — or go straight to one of the APIs or properties below.
 
- - Conglomerate, Energy, Finance, Freight Rail, Insurance, Investment, Manufacturing, Retail, Utilities
+### APIs (1)
 
-## Timestamps
+- [BNSF Railway API](https://apis.io/apis/berkshire-hathaway/bnsf-api/) — The BNSF API Center provides customer APIs for programmatic integration with BNSF Railway freight shipping operations. APIs enable real-time shipment…
 
-- **Created:** 2026-03-21
-- **Modified:** 2026-04-19
+### Published properties
 
-## APIs
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-### BNSF Railway API
-The BNSF API Center provides customer APIs for programmatic integration
-with BNSF Railway freight shipping operations. APIs enable real-time
-shipment tracing, intermodal hub operations, pricing and rate retrieval,
-transit schedule lookups, waybill management, and diagnostic testing.
-Authentication uses certificate-based mutual TLS (mTLS) for secure
-identity validation between customers and BNSF systems.
+#### Security (1)
 
-**Human URL:** [https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/](https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags:
+- [Berkshire Hathaway Domain Security](https://apis.io/security/berkshire-hathaway/berkshire-hathaway-domain-security/)
 
- - Freight, Logistics, Rail, Shipment Tracking, Supply Chain, Transportation
+#### Plans and pricing (1)
 
-#### Properties
+Published plans, tiers and prices.
 
-- [Documentation](https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/)
-- [GettingStarted](https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/getting-started/)
-- [Console](https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/developers-console/)
-- [APIReference](https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/catalog/)
-- [Support](https://www.bnsf.com/ship-with-bnsf/support-services/customer-api/support/)
+- [Berkshire Hathaway Plans Pricing](https://apis.io/plans/berkshire-hathaway/berkshire-hathaway-plans-pricing/)
 
-## Common Properties
+#### Rate limits (1)
+
+Published request limits.
+
+- [Berkshire Hathaway Rate Limits](https://apis.io/rate-limits/berkshire-hathaway/berkshire-hathaway-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Berkshire Hathaway Finops](https://apis.io/finops/berkshire-hathaway/berkshire-hathaway-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.berkshirehathaway.com)
+- [Terms of service](https://www.berkshirehathaway.com/disclaimer.html)
 
-## Features
+## API Evangelist rating
 
-| Name | Description |
-|------|-------------|
-| BNSF Freight Rail Network | BNSF Railway operates one of North America's largest freight rail networks, transporting consumer goods, agricultural products, industrial materials, coal, and intermodal containers across 32,500 route miles in 28 states and 3 Canadian provinces. |
-| Insurance Operations | Berkshire Hathaway's insurance operations include GEICO (auto insurance), Berkshire Hathaway Specialty Insurance, National Indemnity, General Re, and MedPro Group, providing insurance and reinsurance across personal and commercial lines. |
-| Energy and Utilities | Berkshire Hathaway Energy operates regulated electric and natural gas utilities, pipelines, and renewable energy facilities across the United States, United Kingdom, Canada, and Australia. |
-| Manufacturing and Industrial | Manufacturing subsidiaries include Precision Castparts (aerospace components), Iscar (cutting tools), Marmon Group (industrial products), and Lubrizol (specialty chemicals). |
-| Wholesale Distribution | McLane Company provides wholesale distribution of grocery and foodservice products to retail and restaurant customers across the United States. |
+**Kin Score 23.9** — emerging · rubric 0.24.0 · scored 2026-10-17
 
-## Use Cases
+| Facet | Score |
+|---|---|
+| Discoverability | 67.0 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 39.5 |
+| Developer ergonomics | 40.5 |
+| Access clarity | 23.7 |
 
-| Name | Description |
-|------|-------------|
-| Freight Shipment Tracking | Shippers and logistics providers integrate the BNSF API to display real-time freight tracking in their transportation management systems and customer-facing applications. |
-| Freight Pricing and Scheduling | Customers use the BNSF pricing and schedules APIs to obtain freight rates, compare transit times, and automate rate shopping in procurement and logistics workflows. |
-| Waybill Submission | Shippers submit bills of lading and retrieve waybill information programmatically through the BNSF Waybill Management API to reduce manual data entry and streamline freight documentation. |
-| Intermodal Hub Operations | Intermodal customers access container and trailer status, storage location, and driver pickup/delivery details at BNSF intermodal facilities through the Hub Operations API. |
+**Agent readiness 6.4** — agent-aware
 
-## Integrations
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | unknown |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
 
-| Name | Description |
-|------|-------------|
-| Transportation Management Systems | BNSF APIs integrate with TMS platforms used by shippers and third-party logistics providers to automate freight booking, tracking, and documentation within existing supply chain workflows. |
-| Enterprise Resource Planning | BNSF customer APIs enable direct integration with ERP and procurement systems to automate freight cost management, scheduling, and shipment visibility without manual portal access. |
+**Regulatory alignment 8.2** — Energy & Utilities
 
-## Maintainers
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/berkshire-hathaway/](https://apis.io/providers/berkshire-hathaway/).
 
-**FN:** Kin Lane
+## How this profile is made
 
-**Email:** kin@apievangelist.com
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Berkshire Hathaway: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/berkshire-hathaway/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
